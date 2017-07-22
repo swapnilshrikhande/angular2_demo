@@ -1,0 +1,20 @@
+<p>
+    {{a}}
+</p>
+<input type="text" [(ngModel)]="str">
+<h1>{{str | uppercase}}</h1>
+<button (click)="onClick()">Hello</button>
+
+<h1>Template Binding</h1>
+<input (keyup)="0" #number1 >
+<h1>{{number1.value}}</h1>
+
+<h1>Two Way Binding</h1>
+<input type="number" [(ngModel)]="numberOne" (change)="add()">
+<input type="number" [(ngModel)]="numberTwo" (change)="add()">
+<h1>{{ result | double | currency : 'INR':true }}</h1>
+
+<h1>Looping Over Array</h1>
+<ul >
+    <li *ngFor="let item of arr">{{item}}</li>
+</ul>
